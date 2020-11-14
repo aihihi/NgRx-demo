@@ -1,0 +1,64 @@
+<h1 class="title">Update Exsiting Post</h1>
+
+<div class="container">
+  <form (ngSubmit)="updatePost(updateForm)" #updateForm="ngForm">
+    <div class="filed-input">
+      <mat-form-field class="full-width">
+        <mat-label>Post Title</mat-label>
+        <input matInput [(ngModel)]="postToBeUpdated.title" required name="title">
+      </mat-form-field>
+    </div>
+    <div class="filed-input">
+      <mat-form-field class="full-width">
+        <mat-label>Post Content</mat-label>
+        <textarea matInput [(ngModel)]="postToBeUpdated.body" required name="body" rows="5"></textarea>
+      </mat-form-field>
+    </div>
+    
+    <div class="group-btn">
+      <button mat-raised-button color="primary" [disabled]="updateForm.invalid" type="submit">Update Post</button>
+      <button mat-stroked-button color="primary" (click)="backToList()" class="btnCancel">Cancel</button>
+    </div>
+  </form>
+  <!-- <dialog-post
+    [dialogTitle]="dialogTitle"
+    [dialogContent]="dialogContent"
+  >
+  </dialog-post> -->
+</div>
+
+<!-- <button mat-stroked-button (click)="openSnackBar()" aria-label="Show an example snack-bar">
+  Pizza party
+</button> -->
+
+
+
+
+<!-- <div style="margin-top: 50px; margin-left: 50px;">
+    <h4>Update Post</h4>
+    <form (ngSubmit)="updatePost(updateForm)" #updateForm="ngForm">
+      <div class="form-group">
+        <label for="name">Post Title</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          class="form-control"
+          required
+          [(ngModel)]="postToBeUpdated.title"
+          style="width: 400px"/>
+      </div>
+      <div class="form-group">
+        <label for="side">Post content</label>
+        <input
+          type="text"
+          id="description"
+          name="description"
+          class="form-control"
+          required
+          [(ngModel)]="postToBeUpdated.body"
+          style="width: 400px"/>
+      </div>
+      <button [disabled]="updateForm.invalid" class="btn btn-primary" type="submit">Update</button>
+    </form>
+  </div> -->

@@ -1,0 +1,42 @@
+.post-list-container {
+    padding: 25px 200px;
+}
+
+.title {
+    text-align: center;
+}
+
+.table-wrapper {
+    border: 1px solid #ccc;
+    margin-top: 15px;
+    box-shadow: 2px 2px #ccc;
+    table {
+        border-spacing: 0;
+        font-size: 16px;
+        font-family: "Roboto";
+        th {
+            padding: 25px 15px 15px 15px;
+        }
+        td {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 45px;
+        }
+        tr:hover {
+            background-color: rgba(0, 0, 0, 0.04);
+            
+        }
+    }
+}
+
+.actions {
+    width: 100px;
+    cursor: pointer;
+    .delete-action {
+        margin-left: 15px;
+    }
+}
+
+.btn-wrapper {
+    text-align: right;
+    width: 100%;
+}

@@ -1,0 +1,22 @@
+<h1 class="title">Create New Post</h1>
+<div class="container">
+  <form (ngSubmit)="onSubmit(createForm)" #createForm="ngForm">
+    <div class="filed-input">
+      <mat-form-field class="full-width">
+        <mat-label>Post Title</mat-label>
+        <input matInput ngModel required name="title">
+      </mat-form-field>
+    </div>
+    <div class="filed-input">
+      <mat-form-field class="full-width">
+        <mat-label>Post Content</mat-label>
+        <textarea matInput ngModel required name="body" rows="5"></textarea>
+      </mat-form-field>
+    </div>
+    
+    <div class="group-btn">
+      <button mat-raised-button color="primary" [disabled]="createForm.invalid" type="submit">Create Post</button>
+      <button mat-stroked-button color="primary" (click)="backToList()" class="btnCancel">Cancel</button>
+    </div>
+  </form>
+</div>
